@@ -10,7 +10,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
@@ -19,11 +19,15 @@ color:white;
 }
 
 header{
-background:#000;
-padding:20px;
+position:fixed;
+top:0;
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 50px;
+background:rgba(0,0,0,.85);
+z-index:1000;
 }
 
 header h1{
@@ -32,56 +36,73 @@ color:#FFD700;
 
 nav a{
 color:white;
-margin-left:20px;
 text-decoration:none;
+margin-left:25px;
+font-weight:bold;
 }
 
 .hero{
-padding:100px 20px;
+margin-top:80px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:linear-gradient(to right,#111,#333);
+padding:40px 20px;
+}
+
+.hero video{
+width:90%;
+max-width:1000px;
+border-radius:18px;
+box-shadow:0 0 30px rgba(255,215,0,.35);
+margin-bottom:35px;
 }
 
 .hero h2{
-font-size:60px;
-margin-bottom:20px;
+font-size:3rem;
+color:#FFD700;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:22px;
+font-size:1.2rem;
+max-width:700px;
 margin-bottom:30px;
 }
 
 .btn{
+display:inline-block;
+padding:15px 40px;
 background:#FFD700;
-color:#000;
-padding:15px 30px;
-border-radius:8px;
+color:black;
 text-decoration:none;
 font-weight:bold;
+border-radius:10px;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 padding:60px;
 }
 
 .card{
 background:#222;
 padding:20px;
-border-radius:12px;
+border-radius:15px;
+text-align:center;
 transition:.3s;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-8px);
 }
 
 .card img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 }
 
 .card h3{
@@ -90,12 +111,13 @@ color:#FFD700;
 }
 
 footer{
-background:#000;
 padding:40px;
 text-align:center;
+background:#000;
 margin-top:40px;
 }
 </style>
+
 </head>
 
 <body>
@@ -114,28 +136,17 @@ margin-top:40px;
 
 </header>
 
-.hero{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    min-height:80vh;
-    padding:60px 20px;
-    background:linear-gradient(to right,#111,#333);
-}
+<section class="hero">
 
-<h2>RAH Merch & Events</h2>
-
-<p>Custom Merchandise • Handmade Knits • Event Apparel</p>
-
-<a class="btn" href="#">Shop Now</a>
-
-</section>
+<video autoplay muted loop playsinline controls>
+<source src="1000078543.mp4" type="video/mp4">
+</video>
 
 <h2>Merch • Knits • Events</h2>
 
-<p>Unique handmade knitwear, custom merchandise, and event products.</p>
+<p>
+Premium custom merchandise, handmade knitwear, and unique event apparel created with style and quality.
+</p>
 
 <a class="btn" href="#">Shop Now</a>
 
@@ -144,21 +155,21 @@ margin-top:40px;
 <section class="products">
 
 <div class="card">
-<img src="https://placehold.co/500x500" alt="">
-<h3>Custom T-Shirts</h3>
-<p>Create your own personalized apparel.</p>
+<img src="https://placehold.co/500x500?text=T-Shirts">
+<h3>T-Shirts</h3>
+<p>Custom apparel for every occasion.</p>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/500x500" alt="">
+<img src="https://placehold.co/500x500?text=Knits">
 <h3>Handmade Knits</h3>
 <p>Scarves, hats, blankets and more.</p>
 </div>
 
 <div class="card">
-<img src="https://placehold.co/500x500" alt="">
+<img src="https://placehold.co/500x500?text=Events">
 <h3>Event Merchandise</h3>
-<p>Perfect for birthdays, reunions and special occasions.</p>
+<p>Custom items for birthdays, reunions and celebrations.</p>
 </div>
 
 </section>
@@ -169,7 +180,7 @@ margin-top:40px;
 
 <p>Email: info@rahmerchandevents.com</p>
 
-<p>© 2026 RAH Merch & Events. All Rights Reserved.</p>
+<p>© 2026 RAH Merch & Events</p>
 
 </footer>
 
